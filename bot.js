@@ -356,7 +356,14 @@ client.on('message', message => {
 
 
 
-  
+client.on('message' , async (message) => {
+ if (message.content.startsWith(prefix + 'dm')) {
+    setInterval(function() {
+        let user = message.mentions.users.first() || message.author;
+            user.send('hi lol')
+    }, 1000)
+ }
+});  
 
   
 
