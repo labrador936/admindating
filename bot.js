@@ -374,7 +374,38 @@ client.on('message', ra3d => {
 
  
  
- 
+          const table = require('table')
+const arraySort = require('array-sort');
+
+
+         var x5bz = "%"
+         
+
+client.on('message' , async (message) => {
+
+    if(message.content.startsWith(x5bz + "invites")) {
+           if(!message.channel.guild) return
+
+  var invites = await message.guild.fetchInvites();
+
+    invites = invites.array();
+
+    arraySort(invites, 'uses', { reverse: true });
+
+    let possibleInvites = [['User Invited', 'Uses']];
+    invites.forEach(i => {
+      possibleInvites.push([i.inviter.username , i.uses]); 
+    })
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setTitle("Server Invites")
+    .addField('Top Invites:' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
+    .setThumbnail(message.author.avatarURL)
+
+    message.channel.send(embed)
+    }
+});
+
  
  
 
@@ -405,7 +436,7 @@ client.on('message', message => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting ' + member.displayName + ' Banned',
+    title: 'Reason Adversting ' + member.displayName + ' Kicked',
     color: 490101,
     }
     });
