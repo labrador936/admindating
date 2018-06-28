@@ -101,7 +101,7 @@ client.on('message', function(msg) {
          var prefix = "%"
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
-      .setColor('RANDOM')
+      .setColor('RANDOM') 
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`Showing Details Of  **${msg.guild.name}*`)
       .addField(':globe_with_meridians:** Server region**',`[** __${msg.guild.region}__ **]`,true)
