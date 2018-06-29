@@ -384,7 +384,7 @@ client.on('message', message => {
        if(message.content.startsWith(prefix + 'active')) {
         let modlog = client.channels.find('name', 'active_me');
        if(!message.channel.guild) return message.channel.send('**This commands only for servers**').then(m => m.delete(5000));
-       message.channel.sendMessage(`Click the emoji to Active`).then(msg => {
+       message.channel.sendMessage(`Click the emoji to Active you`).then(msg => {
         
         
         msg.react('✅')
@@ -399,7 +399,7 @@ client.on('message', message => {
                                                         
                                active.on("collect", r => {
                                    message.member.addRole(message.guild.roles.find("name", "active"));
-                                   message.member.removeRole(message.guild.roles.find("name", "not active"));
+                                   message.member.removeRole(message.guild.roles.find("name", "not-active"));
                                    msg.delete();
                                    message.channel.send(`**You Are Activated enjoy in our server**`).then(m => m.delete(1000));
      
