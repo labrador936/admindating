@@ -389,22 +389,6 @@ client.on('message', message => {
   
  
 
-if (command == (prefix + 'warn')) {
-    let say = new Discord.RichEmbed()
-    .setDescription(args.join("  "))
-    .setColor(0x831f18)
-    message.channel.sendEmbed(say);
-    client.channels.get("462849211034107904").send(`**=========================================**`)
-    client.channels.get("462849211034107904").send(`**New Warn !**`)
-    client.channels.get("462849211034107904").send({embed : say})
-    client.channels.get("462849211034107904").send(`**Admin : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("462849211034107904").send(`**In Channel : ${message.channel}**`)
-    message.delete();
-  }
-
-
-});
-  
 
 
  
