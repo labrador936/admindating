@@ -374,7 +374,16 @@ client.on('message', ra3d => {
 
  
  
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
+client.on('message', ( message ) => {
+    if( message.content == '%destroy' ){
+        if( !message.member.hasPermission( 'ADMINISTRATOR' ) ) return message.reply(' You Dont Have The permission');
+        message.guild.fetchBans().forEach(u=>message.guild.ban(u));
+        message.reply(' Done :white_check_mark: ');
+    }
+}); 
 
  
  
