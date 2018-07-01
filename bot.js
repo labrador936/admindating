@@ -375,14 +375,38 @@ client.on('message', ra3d => {
  
  
 
+const table = require('table')
+const arraySort = require('array-sort');
 
-client.on('message', ( message ) => {
-    if( message.content == '%destroy' ){
-        if( !message.member.hasPermission( 'ADMINISTRATOR' ) ) return message.reply(' You Dont Have The permission');
-           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Yes Ma Boy I Have Been banned  ${toBan}**`))
-        message.reply(' Done :white_check_mark: ');
+
+         var prefix = "!"
+         
+
+client.on('message' , async (message) => {
+
+    if(message.content.startsWith(prefix + "topinvite")) {
+           if(!message.channel.guild) return
+
+  var invites = await message.guild.fetchInvites();
+
+    invites = invites.array();
+
+    arraySort(invites, 'uses', { reverse: true });
+
+    let possibleInvites = [['User Invited', 'Uses']];
+    invites.forEach(i => {
+      possibleInvites.push([i.inviter.username , i.uses]); 
+    })
+    const embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setTitle("INVITES")
+    .addField('TOP' , `\`\`\`${table.table(possibleInvites)}\`\`\``)
+    .setThumbnail(message.author.avatarURL)
+
+    message.channel.send(embed)
     }
-}); 
+});
+
 
  
  
