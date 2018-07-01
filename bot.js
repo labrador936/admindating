@@ -366,7 +366,7 @@ client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
   if(!message.channel.guild) return;
-  if(!message.member.hasPermission('MANAGE_MESSAGES')) return;
+  if(!message.member.hasPermission('BAN_MEMBERS')) return;
   if (message.mentions.users.size < 1) return;
 
   let command = message.content.split(" ")[0];
