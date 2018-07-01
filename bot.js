@@ -305,6 +305,7 @@ client.on("message", message => {
  %kick   <member> <reason>   | For Kick A Member
  %mute   <member> <reason>   | For Mute A Member
  %unmute <member>            | For Unmute A Member
+ %warn   <member> <reason>   | Warn A Memebr
  %bc1                        | For Do BroadCast
  +[ ---------------------------- ]+
          **General  Commands**
