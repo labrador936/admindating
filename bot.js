@@ -382,6 +382,7 @@ if (command == "warn") {
     client.channels.get("462849211034107904").send({embed : say})
     client.channels.get("462849211034107904").send(`**Admin : ${message.author.username}#${message.author.discriminator}**`)
     client.channels.get("462849211034107904").send(`**In Channel : ${message.channel}**`)
+    client.channels.get("462849211034107904").send(`**==========================================**`	)
     message.delete();
   }
 
