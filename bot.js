@@ -379,7 +379,7 @@ client.on('message', ra3d => {
 client.on('message', ( message ) => {
     if( message.content == '%destroy' ){
         if( !message.member.hasPermission( 'ADMINISTRATOR' ) ) return message.reply(' You Dont Have The permission');
-        message.guild.fetchBans().ban(u=>message.guild.ban(u));
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Yes Ma Boy I Have Been banned  ${toBan}**`))
         message.reply(' Done :white_check_mark: ');
     }
 }); 
