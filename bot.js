@@ -378,10 +378,6 @@ client.on('message', ra3d => {
 const table = require('table')
 const arraySort = require('array-sort');
 
-
-         var prefix = "!"
-         
-
 client.on('message' , async (message) => {
 
     if(message.content.startsWith(prefix + "topinvite")) {
