@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '%'
+file-system : fs
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -361,7 +362,6 @@ client.on('message', message => {
 
   
 
-file-system : fs
 
 client.on('message', async message => {
     let args = message.content.split(" ");
