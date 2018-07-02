@@ -537,7 +537,7 @@ client.on('guildMemberAdd', member => {
         .setDescription(`**${sw[member.guild.id].msk}**`)
         .addField("**Member name**", `[<@${member.user.id}>]`,true)
         .addField("**Now we are**", `[${member.guild.memberCount}]`,true)
-        channel.sendMessage(`<@${member.user.id}>`)
+        message.channel.send(`<@${member.user.id}>`)
         channel.sendEmbed(embed)
     }
  
