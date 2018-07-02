@@ -452,7 +452,7 @@ if (!id[getvalueof.id]) id[getvalueof.id] = {textrank: 0,points: 1};
             let Image = Canvas.Image,
             canvas = new Canvas(400, 200),
             ctx = canvas.getContext('2d');
-            fs.readFile("./id/rank.png", function (err, Background) {
+            fs.readFile("./rank.png", function (err, Background) {
             if (err) return console.log(err);
             let id = Canvas.Image;
             let ground = new Image;
