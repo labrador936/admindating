@@ -383,7 +383,7 @@ if (command == "warn") {
     .setColor(0x831f18)
     message.channel.sendEmbed(say);
     client.channels.get("462865002819223552").send(`**=========================================**`)
-    client.channels.get("462865002819223552").send(`**New Warn !**`)
+    client.channels.get("462865002819223552").send(`**New Warn ! @Control Tower**`)
     client.channels.get("462865002819223552").send({embed : say})
     client.channels.get("462865002819223552").send(`**Admin : ${message.author.username}#${message.author.discriminator}**`)
     client.channels.get("462865002819223552").send(`**In Channel : ${message.channel}**`)
@@ -396,76 +396,6 @@ if (command == "warn") {
 
 
 
-client.on("message", message => {
-  if (message.author.bot) return;
-fs.writeFile('./mozo.json', JSON.stringify, (err) => {
-if (err) console.error(err);
-});
-});
-      client.on('message', message => {
-          if(!id[message.author.id]) id[message.author.id] ={
-              textrank: 1,
-              points: 1
-          };
-          if(message.author.bot) return;
-          id[message.author.id].points = Math.floor(id[message.author.id].points+4);
-          if(id[message.author.id].points > 10) {
-              id[message.author.id].points = 10;
-              id[message.author.id].level = Math.floor(id[message.author.id].level+4);
-          }
-          fs.writeFile('./mozo.json', JSON.stringify, (err) => {
-if (err) console.error(err);
-});
-   
-    client.on("message", message => {
-  if (message.author.bot) return;
-    if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + "id")) {
-                               let user = message.mentions.users.first();
-         var human = message.mentions.users.first();
-            var author;
-            if(human) {
-                author = human;
-            } else {
-                author = message.author;
-            }
-          var mentionned = message.mentions.members.first();
-             var ah;
-            if(mentionned) {
-                ah = mentionned;
-            } else {
-                ah = message.member;
-            }
-            var ment = message.mentions.users.first();
-            var getvalueof;
-            if(ment) {
-              getvalueof = ment;
-            } else {
-              getvalueof = message.author;
-            }
-   var mentionned = message.mentions.users.first();
- 
-    var client;
-      if(mentionned){
-          var client = mentionned;
-      } else {
-          var client = message.author;
- 
-      }
-if (!id[getvalueof.id]) id[getvalueof.id] = {textrank: 0,points: 1};
-            let Image = Canvas.Image,
-            canvas = new Canvas(400, 200),
-            ctx = canvas.getContext('2d');
-            fs.readFile("./rank.png", function (err, Background) {
-            if (err) return console.log(err);
-            let id = Canvas.Image;
-            let ground = new Image;
-            ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 400, 200);
- 
-});
- 
- 
  
                 let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
                 jimp.read(url, (err, ava) => {
