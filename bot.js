@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
+const Canvas = require("canvas");
+const jimp = require("jimp");
 const id = JSON.parse(fs.readFileSync("./mozo.json", "utf8"));
 const prefix = '%'
 
