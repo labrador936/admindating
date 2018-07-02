@@ -400,60 +400,7 @@ if (command == "warn") {
 
 
 
- 
-                let url = getvalueof.displayAvatarURL.endsWith(".webp") ? getvalueof.displayAvatarURL.slice(5, -20) + ".png" : getvalueof.displayAvatarURL;
-                jimp.read(url, (err, ava) => {
-                    if (err) return console.log(err);
-                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                        if (err) return console.log(err);
- 
-                        // N A M E  |  S H A D O W
-                        ctx.font = 'bold 18px Arial';
-                        ctx.fontSize = '18px';
-                        ctx.fillStyle = "#000000";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${getvalueof.username}`, 253, 79);
- 
-                        // N A M E
-                        ctx.font = 'bold 18px Arial';
-                        ctx.fontSize = '18px';
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${getvalueof.username}`, 253, 77);
- 
- 
-                        // T E X T  R A N K
-                        ctx.font = "bold 12px Arial";
-                        ctx.fontSize = '12px';
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${id[getvalueof.id].textrank}`, 252, 124);
- 
-                        // P O I N T S
-                        ctx.font = "bold 12px Arial";
-                        ctx.fontSize = '12px';
-                        ctx.fillStyle = "#f1f1f1";
-                        ctx.textAlign = "center";
-                        ctx.fillText(`${id[getvalueof.id].points}`, 253, 171);
- 
- 
-                        let Avatar = Canvas.Image;
-                        let ava = new Avatar;
- 
-ava.src = buf;
-                        ctx.beginPath();
-                        ctx.arc(75, 100, 780, 0, Math.PI*2, true);
-                        ctx.closePath();
-                        ctx.clip();
-                        ctx.drawImage(ava, 26, 69, 93, 93);
-                       
-message.channel.sendFile(canvas.toBuffer());
- 
-});
-});
-}
-});
-});
+
 
  
  
