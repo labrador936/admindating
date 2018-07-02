@@ -411,7 +411,7 @@ if (err) console.error(err);
               id[message.author.id].points = 10;
               id[message.author.id].level = Math.floor(id[message.author.id].level+4);
           }
-          fs.writeFile('./id/mozo.json', JSON.stringify(id), (err) => {
+          fs.writeFile('./mozo.json', JSON.stringify, (err) => {
 if (err) console.error(err);
 });
    
