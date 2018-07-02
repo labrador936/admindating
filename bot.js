@@ -2,7 +2,13 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const Canvas = require("canvas");
 const fs = require("fs");
-let sw = JSON.parse(fs.readFileSync("./setWlc.json", "UTF8"))
+const userData = JSON.parse(fs.readFileSync('./userData.json', 'utf8'));
+var Canvas = require('canvas')
+var jimp = require('jimp')
+const moment = require('moment');
+const pretty = require('pretty-ms');
+const rn = require('random-number');
+let done = {};
 const prefix = '%'
 
 
@@ -438,21 +444,6 @@ client.on('message', message => {
 
 
 
-const fs = require("fs");
-const userData = JSON.parse(fs.readFileSync('./userData.json', 'utf8'));
-var Canvas = require('canvas')
-var jimp = require('jimp')
-const moment = require('moment');
-const pretty = require('pretty-ms');
-const rn = require('random-number');
-let done = {};
-var prefix = "!"
-//BY NorElden
-//Codes. Team
-
-client.on('ready', () => {
-console.log(`By NorElden [Codes Team]`);
-});
 
 ////////////RANK
 
