@@ -522,7 +522,7 @@ if (err) console.error(err);
  
  
 client.on('guildMemberAdd', member => {
-   let channel = member.guild.channels.find("name", sw[member.guild.id].text)
+   let channel = member.guild.channels.find("name", sw[member.guild.id])
  
     if(sw[member.guild.id].styler === "text") {
         channel.sendMessage(`<@${member.user.id}>, ${sw[member.guild.id].msk}`)
