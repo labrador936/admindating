@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const Canvas = require("canvas");
 const fs = require("fs");
+let sw = JSON.parse(fs.readFileSync("./setWlc.json", "UTF8"))
 const prefix = '%'
 
 
@@ -522,7 +523,7 @@ if (err) console.error(err);
  
  
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find("name", sw[member.guild.id].chat)
+    let channel = member.guild.channels.find("name", sw[member.guild.id].cha)
  
     if(sw[member.guild.id].styler === "text") {
         channel.sendMessage(`<@${member.user.id}>, ${sw[member.guild.id].msk}`)
