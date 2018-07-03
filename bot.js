@@ -34,10 +34,8 @@ client.user.setGame(`ATLANTIC BOT | %help`,"http://twitch.tv/S-F")
 
 client.on('message', message => {
     if(message.content.startsWith("%count")) {
-        message.channel.send('_Count_: ${message.guild.member.Count}`,'-', true)
+        message.channel.send('_Count_: ${message.guild.member.Count})
     }
-    ${message.guild.memberCount}`,'-',   true)   
-
 
 })
 
