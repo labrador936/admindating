@@ -383,7 +383,7 @@ if (command == "warn") {
     .setColor(0x831f18)
     message.channel.sendEmbed(say);
     client.channels.get("462865002819223552").send(`**=========================================**`)
-    client.channels.get("462865002819223552").send(`**New Warn ! @Control Tower**`)
+    client.channels.get("462865002819223552").send(`**New Warn !**`)
     client.channels.get("462865002819223552").send({embed : say})
     client.channels.get("462865002819223552").send(`**Admin : ${message.author.username}#${message.author.discriminator}**`)
     client.channels.get("462865002819223552").send(`**In Channel : ${message.channel}**`)
