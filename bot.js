@@ -32,12 +32,6 @@ client.user.setGame(`ATLANTIC BOT | %help`,"http://twitch.tv/S-F")
 
 
 
-client.on('message', message => {
-    if(message.content.startsWith("%count")) {
-        message.channel.send('_Count_: ${message.guild.member.Count})
-    }
-
-})
 
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome-my-dear');
