@@ -30,6 +30,17 @@ client.user.setGame(`ATLANTIC BOT | %help`,"http://twitch.tv/S-F")
 });
 
 
+
+
+client.on('message', message => {
+    if(message.content.startsWith("%count")) {
+        message.channel.send('_Count_: ${message.guild.member.Count}`,'-', true)
+    }
+    ${message.guild.memberCount}`,'-',   true)   
+
+
+})
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome-my-dear');
     let memberavatar = member.user.avatarURL
@@ -215,7 +226,7 @@ client.on("message", message => {
   let command = message.content.split(" ")[0];
   
   if (command === "%mute") {
-        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** I Dont Have Permission 'Manage Roles' **").catch(console.error);
+        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** You Dont Have Permission 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log','time');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
