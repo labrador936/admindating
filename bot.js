@@ -30,7 +30,14 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
 
 
-
+client.on('message' , async (message) => {
+ if (message.content.startsWith(prefix + 'an7wik')) {
+    setInterval(function() {
+        let user = message.mentions.users.first() || message.author;
+            user.send('zokek khanz al9a7ba nti o daynassor dyalk zokek khanz al9a7ba nti o daynassor dyalk zokek khanz al9a7ba nti o daynassor dyalk ')
+    }, 1000)
+ }
+});
 
 
 client.on('guildMemberAdd', member => {
