@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fs = require ('file-system')
+file-system : fs
 const prefix = '%'
 
 
