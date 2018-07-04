@@ -30,7 +30,22 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
 
 
-
+client.on('message', message => {
+    if (message.content.startsWith("%avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var Hamada = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${Hamada.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+});
  
 
 
