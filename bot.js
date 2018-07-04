@@ -52,7 +52,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' server', `${member.guild.name}`,true)
                                        
-     .setFooter("**THE ATLANTIC**")
+     .setFooter("**Dating Everyone**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
