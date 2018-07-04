@@ -5,7 +5,7 @@ const prefix = '%'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`ATLANTIC BOT | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
