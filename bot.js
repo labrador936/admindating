@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-file-system : fs
 const prefix = '%'
 
 
@@ -61,32 +60,7 @@ client.on('guildMemberAdd', member => {
 
 	
 
-let points = JSON.parse(fs.readFileSync("./level.json", "utf8"));
- client.on("message", message => {
-   if (!message.content.startsWith(prefix)) return;
-   if (message.author.bot) return; 
 
-   if (!points[message.author.id]) points[message.author.id] = {
-     points: 0,
-     level: 0
-   };
-   let userData = points[message.author.id];
-   userData.points++;
- 
-   let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-   if (curLevel > userData.level) {
-     // Level up message
-     userData.level = curLevel;
-     message.channel.send(`**🆙 | ${message.author.username} You leveled up to ${curLevel}**`);
-   }
-   if (message.content.startsWith(prefix + "level")) {
-     message.channel.send(`**${message.author.username} You are level is ${userData.level}**`);
-   }
-   fs.writeFile("./level.json", JSON.stringify(points), (err) => {
-     if (err) console.error(err)
-   });
- 
- });
 
 
 
