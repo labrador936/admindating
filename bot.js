@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-let points = JSON.parse(fs.readFileSync("./level.json", "utf8"));
+const fs = require ('file-system')
 const prefix = '%'
 
 
@@ -61,7 +61,7 @@ client.on('guildMemberAdd', member => {
 
 	
 
-
+let points = JSON.parse(fs.readFileSync("./level.json", "utf8"));
  client.on("message", message => {
    if (!message.content.startsWith(prefix)) return;
    if (message.author.bot) return; 
