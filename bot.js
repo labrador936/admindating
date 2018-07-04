@@ -30,14 +30,7 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
 
 
-client.on('message' , async (message) => {
-    if (message.content.startsWith(prefix + '7wi hafssa')) {
-for (let i = 0; i < 500; i++) {
 
-        message.user.send('wa siri t9awdi');
-}
-}
-});    
 
 
 client.on('guildMemberAdd', member => {
