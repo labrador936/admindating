@@ -477,18 +477,18 @@ client.on('message', message => {
     if (message.content.includes('https://discord.gg')){
     if(!message.channel.guild) return message.reply ('')
     if (!message.member.hasPermissions(['MANAGE_MESSAGES'])){
-    message.channel.send('kick <@' + message.author.id + '>')
+    message.channel.send('ban <@' + message.author.id + '>')
     message.delete() 
     }
     }
-    if (message.content.startsWith("kick ")) {
+    if (message.content.startsWith("ban ")) {
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
     var member= message.mentions.members.first();
-    member.kick().then((member) => {
+    member.ban().then((member) => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting ' + member.displayName + ' Kicked',
+    title: 'Reason Adversting ' + member.displayName + ' Banned',
     color: 490101,
     }
     });
