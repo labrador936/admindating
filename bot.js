@@ -133,7 +133,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = ['348555232529219585','411081496485691392'];
+	const myID = ('348555232529219585','411081496485691392');
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
