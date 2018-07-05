@@ -133,7 +133,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = ('348555232529219585','411081496485691392');
+	const myID = "348555232529219585";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -146,7 +146,7 @@ client.on('message', function(message) {
     } else if(message.content.startsWith(prefix + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://www.twitch.tv/dggamingbot');
+        client.user.setGame(args , 'https://www.twitch.tv/datingbot');
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(5000);
           message.delete(5000);
