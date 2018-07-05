@@ -70,7 +70,7 @@ client.on('message', message => {
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc1') {
+if(message.content.split(' ')[0] == prefix + 'bc') {
     if (!args[1]) {
 return;
 }
@@ -89,20 +89,25 @@ return;
 });
 
 
-client.on('message', message => {
-    if (message.author.bot) return;
-    if(message.content == '%member') {
-    const embed = new Discord.RichEmbed()
-    .addField(` **ATLANTIC** Members`,'-',   true)
-.addField(`  online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}`,'-',   true)
-.addField(`  dnd:     ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}`,'-',   true)
-.addField(`  idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}`,'-',   true)   
-.addField(`  offline:   ${message.guild.members.filter(m=>m.presence.status == 'offline').size}`,'-',  true) 
-.addField(`  all:  ${message.guild.memberCount}`,'-',   true)         
+  client.on('message',function(message) {
+  if (message.author.bot) return;
+
+
+                  if(!message.channel.guild) return;
+
+                    if (message.content === prefix + "members") {
+ const embed = new Discord.RichEmbed()
+
+    .setDescription(`**Members info ✨
+💚 online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+❤  dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+💛  idle:     ${message.guild.members.filter(m=>m.presence.status == 'idle').size}
+💠   membersCount:  ${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size}
+💡 bots: ${message.guild.members.filter(m=>m.user.bot).size} **`)
          message.channel.send({embed});
 
     }
-  });
+      });
 
 
 client.on('message', function(msg) {
@@ -125,29 +130,59 @@ client.on('message', function(msg) {
 
 	  
 	  
-	const devs = ['348555232529219585'];
-const adminprefix = "%";
-client.on('message', message => {
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-      
-  if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult);
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult, {type:'WATCHING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'ls')) {
-  client.user.setActivity(argresult , {type:'LISTENING'});
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
-  }
-  });  
+client.on('message', function(message) {
+	const myID = "348555232529219585","411081496485691392";
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(message.content.startsWith(prefix + "setname")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setUsername(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "stream")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(args , 'https://www.twitch.tv/dggamingbot');
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "play")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "listen")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(args, {type:'LISTENING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "watch")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(args, {type:'WATCHING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "setavatar")) {
+				        if(message.author.id !== myID) return;
+        client.user.setAvatar(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    }
+});
 	  
 	  
 
