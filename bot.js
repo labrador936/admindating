@@ -33,6 +33,7 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 
 
 
+
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
         if(message.author.id !== "348555232529219585") return message.reply('You aren\'t the bot owner.');
