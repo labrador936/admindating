@@ -414,17 +414,17 @@ client.on("message", message => {
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
  %mute   <member> <reason>   | For Mute A Member
- %unmute <member>   | For Unmute A Member
+ %unmute <member>            | For Unmute A Member
  %warn   <member> <reason>   | Warn A Memebr
- %bc   | For Do BroadCast
- %clear   | To clear the chat
+ %bc                         | For Do BroadCast
+ %clear                      | To clear the chat
  +[ ---------------------------- ]+
          **General  Commands**
  +[ ---------------------------- ]+
  %report <member> <reason>   | For Report A Member
- %server   | For See Server Stats
- %members   | For See Members Stats
- %ping   | To check your ping
+ %server                     | For See Server Stats
+ %members                    | For See Members Stats
+ %ping                       | To check your ping
 
  `)
  message.author.send(embed);
