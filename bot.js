@@ -304,16 +304,6 @@ client.on('message', async message => {
       message.delete(3500);
     });
 
-    let duration = args[2];
-    if(!duration) return message.reply('**choose timeline**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-
-    if(isNaN(duration)) return message.reply('**choose right timeline**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
 
     let reason = message.content.split(" ").slice(3).join(" ");
     if(!reason) reason = "undefined";
@@ -347,13 +337,7 @@ client.on('message', async message => {
       message.channel.send(`**:white_check_mark: ${mention.user.username} muted in the server ! :zipper_mouth:  **  `);
       mention.setMute(true);
     });
-    setTimeout(() => {
-      if(duration === 0) return;
-      if(!mention.has.roles(role)) return;
-      mention.setMute(false);
-      mention.removeRole(role);
-      message.channel.send(`**:white_check_mark: ${mention.user.username} unmuted in the server ! :neutral_face:  **  `);
-    },duration * 60000);
+
   } else if(message.content.startsWith(prefix + "unmute")) {
     let mention = message.mentions.members.first();
     let role = message.guild.roles.find('name', 'dating-mute') || message.guild.roles.get(r => r.name === 'dating-mute');
