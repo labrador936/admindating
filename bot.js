@@ -32,6 +32,7 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
 
 
+
   client.on('message', msg => {
     if(msg.author.bot) return;
     
