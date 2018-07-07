@@ -333,7 +333,7 @@ client.on('message', async message => {
 
     let thisEmbed = new Discord.RichEmbed()
     .setAuthor(mention.user.username, mention.user.avatarURL)
-    .setTitle('Hi bitch u have been muted from `Dating everyone``')
+    .setTitle('Hi bitch u have been muted from ``Dating everyone``')
     .setThumbnail(mention.user.avatarURL)
     .addField(' - You muted by',message.author,true)
     .addField(' - Reason',reason)
