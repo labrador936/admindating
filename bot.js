@@ -316,7 +316,7 @@ client.on('message', message => {
             }
             message.guild.member(men).removeRole(muterole)
                 message.channel.send("**" + men.username + " has been unmuted! 😀 **")
-        }
+        };
 
 
 
