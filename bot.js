@@ -293,30 +293,7 @@ client.on("message", function(message) {
 	  
 
 
-client.on('message', message => {
-        let reason = message.content.split(" ").slice(2).join(" ")
-        let muterole = message.guild.roles.find("name", "dating-mute")
-        let men = message.mentions.users.first()
 
-        if(message.content.startsWith(prefix + "mute")) {
-            if(!men) return message.channel.send("**Do you want me to mute you 🤔 ?, please @mention someone. `Ex. %mute @459913623809032223 bad boy`**");            if(!muterole) {
-                message.guild.createRole({name: "dating-mute", color:"#505f74", permissions: [1115136]})
-
-            }
-            message.guild.member(men).addRole(muterole)
-                message.channel.send("**" + men.username + " has been muted! 🤐**")
-        }
-
-        if(message.content.startsWith(prefix + "unmute")) {
-            if(!men) return message.channel.send("**please @mention someone. `Ex. #unmute <@298732816995319809> `**");
-
-            if(!muterole) {
-                message.guild.createRole({name: "dating-mute", color:"#505f74", permissions: [1115136]})
-
-            }
-            message.guild.member(men).removeRole(muterole)
-                message.channel.send("**" + men.username + " has been unmuted! 😀 **")
-        };
 
 
 
