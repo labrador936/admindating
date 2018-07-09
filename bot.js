@@ -293,95 +293,32 @@ client.on("message", function(message) {
 	  
 
 
-client.on('message', async message => {
-  let args = message.content.split(" ");
-  if(message.content.startsWith(prefix + "mute")) {
-    if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**You dont have permission  `Manage Roles`**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
+client.on('message', message => {
+        let reason = message.content.split(" ").slice(2).join(" ")
+        let muterole = message.guild.roles.find("name", "dating-mute")
+        let men = message.mentions.users.first()
 
-    if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply('**I dont have  `Manage Roles` permission**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
+        if(message.content.startsWith(prefix + "mute")) {
+            if(!men) return message.channel.send("**Do you want me to mute you 🤔 ?, please @mention someone. `Ex. %mute @459913623809032223 bad boy`**");            if(!muterole) {
+                message.guild.createRole({name: "dating-mute", color:"#505f74", permissions: [1115136]})
 
-    let mention = message.mentions.members.first();
-    if(!mention) return message.reply('**Mention the user first for give him mute**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
+            }
+            message.guild.member(men).addRole(muterole)
+                message.channel.send("**" + men.username + " has been muted! 🤐**")
+        }
 
-    if(mention.highestRole.position >= message.guild.member(message.author).highestRole.positon) return message.reply('**You cant mute this person **').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-    if(mention.highestRole.positon >= message.guild.member(client.user).highestRole.positon) return message.reply('**I cant mute this person **').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-    if(mention.id === message.author.id) return message.reply('**You cant mute your self**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
+        if(message.content.startsWith(prefix + "unmute")) {
+            if(!men) return message.channel.send("**please @mention someone. `Ex. #unmute <@298732816995319809> `**");
+
+            if(!muterole) {
+                message.guild.createRole({name: "dating-mute", color:"#505f74", permissions: [1115136]})
+
+            }
+            message.guild.member(men).removeRole(muterole)
+                message.channel.send("**" + men.username + " has been unmuted! 😀 **")
+        }
 
 
-    let reason = message.content.split(" ").slice(3).join(" ");
-    if(!reason) reason = "undefined";
-
-    let thisEmbed = new Discord.RichEmbed()
-    .setAuthor(mention.user.username, mention.user.avatarURL)
-    .setTitle('Hi bitch u have been muted from ``Dating everyone``')
-    .setThumbnail(mention.user.avatarURL)
-    .addField(' - You muted by',message.author,true)
-    .addField(' - Reason',reason)
-
-    let role = message.guild.roles.find('name', 'dating-mute') || message.guild.roles.get(r => r.name === 'dating-mute');
-    if(!role) try {
-      message.guild.createRole({
-        name: "dating-mute",
-        permissions: 0
-      }).then(r => {
-        message.guild.channels.forEach(c => {
-          c.overwritePermissions(r , {
-            SEND_MESSAGES: false,
-            READ_MESSAGES_HISTORY: false,
-            ADD_REACTIONS: false
-          });
-        });
-      });
-    } catch(e) {
-      console.log(e.stack);
-    }
-    mention.addRole(role).then(() => {
-      mention.send(thisEmbed);
-      message.channel.send(`**:white_check_mark: ${mention.user.username} muted in the server ! :zipper_mouth:  **  `);
-      mention.setMute(true);
-    });
-
-  } else if(message.content.startsWith(prefix + "unmute")) {
-    let mention = message.mentions.members.first();
-    let role = message.guild.roles.find('name', 'dating-mute') || message.guild.roles.get(r => r.name === 'dating-mute');
-    if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply('**You dont have permission `Manage Roles`**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-
-    if(!message.guild.member(client.user).hasPermission("MANAGE_ROLES")) return message.reply('**I dont have permission`Manage Roles` to unmute this person **').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-
-    if(!mention) return message.reply('**Mention user you want to unmute him**').then(msg => {
-      msg.delete(3500);
-      message.delete(3500);
-    });
-
-      mention.removeRole(role);
-      mention.setMute(false);
-      message.channel.send(`**:white_check_mark: ${mention.user.username} unmuted in the server ! :neutral_face:  **  `);
-  }
-});
 
 
 
