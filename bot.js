@@ -75,7 +75,31 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
 });
   
 
- 
+client.on("ready", async  => {
+setInterval(function(){
+client.channels.find('id', '457659723362336768').setName("W");
+client.channels.find('id', '457659723362336768').setName("We");
+client.channels.find('id', '457659723362336768').setName("Wel");
+client.channels.find('id', '457659723362336768').setName("Welc");
+client.channels.find('id', '457659723362336768').setName("Welco");
+client.channels.find('id', '457659723362336768').setName("Welcom");
+client.channels.find('id', '457659723362336768').setName("Welcome");
+client.channels.find('id', '457659723362336768').setName("Welcome T");
+client.channels.find('id', '457659723362336768').setName("Welcome To");
+client.channels.find('id', '457659723362336768').setName("Welcome To D");
+client.channels.find('id', '457659723362336768').setName("Welcome To Da");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dat");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dati");
+client.channels.find('id', '457659723362336768').setName("Welcome To Datin");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating G");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating Ga");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating Gam");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating Game");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating Gamer");
+client.channels.find('id', '457659723362336768').setName("Welcome To Dating Gamers");
+  }, 5000);
+}); 
 
 
 client.on('guildMemberAdd', member => {
