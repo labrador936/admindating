@@ -91,6 +91,7 @@ client.channels.find('id', '457659723362336768').setName("Dating Team");
 }); 
 
 
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome-my-dear');
     let memberavatar = member.user.avatarURL
