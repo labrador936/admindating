@@ -33,7 +33,7 @@ client.user.setGame(`Dating Everyone Bot | %help`,"http://twitch.tv/S-F")
   client.on('message', msg => {
     if(msg.author.bot) return;
     
-    if(msg.content === '-serversinfo') {
+    if(msg.content === '%serversinfo') {
       client.guilds.forEach(g => {
         
         let l = g.id
