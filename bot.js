@@ -75,20 +75,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 });
   
 
-client.on("ready", async  => {
-setInterval(function(){
-client.channels.find('id', '457659723362336768').setName("D");
-client.channels.find('id', '457659723362336768').setName("Da");
-client.channels.find('id', '457659723362336768').setName("Dat");
-client.channels.find('id', '457659723362336768').setName("Dati");
-client.channels.find('id', '457659723362336768').setName("Datin");
-client.channels.find('id', '457659723362336768').setName("Dating");
-client.channels.find('id', '457659723362336768').setName("Dating T");
-client.channels.find('id', '457659723362336768').setName("Dating Te");
-client.channels.find('id', '457659723362336768').setName("Dating Tea");
-client.channels.find('id', '457659723362336768').setName("Dating Team");
-  }, 5000);
-}); 
+
 
 
 
