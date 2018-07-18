@@ -31,12 +31,6 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 
 
 
-
-
-
-
-
-
   client.on('message', msg => {
     if(msg.author.bot) return;
     
