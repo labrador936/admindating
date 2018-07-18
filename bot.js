@@ -30,6 +30,26 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 
 
 
+  client.on('voiceStateUpdate', (codes, ReBeL) => {
+if(ReBeL.voiceChannelID !== "469190784177012755") return console.log("أيرور . ");
+ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
+    rebeeel.setParent("469190277622530106");
+ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
+  console.log("تــــــم .");
+  let scan = setInterval(()=>{
+if(!ReBeL.voiceChannel) {
+  rebeeel.delete();
+}
+  }, 1700);
+});
+});
+});
+
+
+
+
+
+
 
   client.on('message', msg => {
     if(msg.author.bot) return;
