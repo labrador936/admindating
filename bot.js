@@ -156,7 +156,7 @@ if(!ReBeL.voiceChannel) {
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "348555232529219585") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== ["348555232529219585","444339372884754435"]) return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
