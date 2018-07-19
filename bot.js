@@ -156,7 +156,7 @@ if(!ReBeL.voiceChannel) {
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== ["348555232529219585","444339372884754435"]) return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "348555232529219585","444339372884754435") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -274,7 +274,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = "348555232529219585";
+	const myID = "348555232529219585","444339372884754435";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
