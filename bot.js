@@ -489,20 +489,42 @@ msg.delete();
 
 
 
+client.on('message', function(message) {
+    if(message.content.startsWith(prefix + "report")) {
+        let messageArgs = message.content.split(" ").slice(1).join(" ");
+        let messageReason = message.content.split(" ").slice(2).join(" ");
+        if(!messageReason) return message.reply("**# - Specify a reason!**");
+    let mUser = message.mentions.users.first();
+    if(!mUser) return message.channel.send("Couldn't find user.");
+    let Rembed = new Discord.RichEmbed()
+    .setTitle("`New Report!`")
+    .setThumbnail(message.author.avatarURL)
+    .addField("**# - Reported User:**",mUser,true)
+    .addField("**# - Reported User ID:**",mUser.id,true)
+    .addField("**# - Reason:**",messageReason,true)
+    .addField("**# - Channel:**",message.channel,true)
+    .addField("**# - Time:**",message.createdAt,true)
+message.channel.send(Rembed)
+message.channel.send("__are you sure you want to send this report ?__").then(msg => {
+    msg.react("✅")
+    msg.react("❌")
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
 
-client.on('message', message => {
-
-  if (message.content.startsWith( prefix + "report")) {
-  if (!message.channel.guild) return;
-  let args = message.content.split(" ").slice(1).join(' ');
-  client.channels.get("406189462419144745").send(
-      "\n" + "**" + " Member : " + "**" +
-      "\n" + "**" + ":arrow_right:  " + message.author.tag + "**" +
-      "\n" + "**" + " Reported : " + "**" +
-      "\n" + "**" + args + "**")
-
-  }
-  });
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+reaction1.on("collect", r => {
+ client.channels.get("470646121899884554").send(Rembed)
+    message.reply("**# - Done! 🎇**");
+})
+reaction2.on("collect", r => {
+    message.reply("**# - Canceled!**");
+})
+})
+}
+});
 
 
 
@@ -545,8 +567,8 @@ if (command == "warn") {
     client.channels.get("462865002819223552").send(`**=========================================**`)
     client.channels.get("462865002819223552").send(`**New Warn !**`)
     client.channels.get("462865002819223552").send({embed : say})
-    client.channels.get("462865002819223552").send(`**Admin : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("462865002819223552").send(`**In Channel : ${message.channel}**`)
+    client.channels.get("462865002819223552").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
+    client.channels.get("462865002819223552").send(`**# - In Channel : ${message.channel}**`)
     client.channels.get("462865002819223552").send(`**==========================================**`	)
     message.delete();
   }
@@ -561,15 +583,7 @@ if (command == "warn") {
  
  
 
- client.on('message' , async (message) => {
-    if (message.content.startsWith(prefix + 'x')) {
-for (let i = 0; i < 500; i++) {
 
-        message.guild.createChannel('ATLANTIC GANG', 'voice')
-        message.channel.send('lol');
-}
-}
-}); 
 
 
 
