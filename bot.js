@@ -516,7 +516,7 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
- client.channels.get("470646121899884554").send(Rembed)
+ client.channels.get("406189462419144745").send(Rembed)
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
