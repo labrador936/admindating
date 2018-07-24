@@ -31,7 +31,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 
 
 client.on('message', message => {
-     if(message.content.startsWith(prefix + "dms")) {
+     if(message.content.startsWith("<dms")) {
  let args = message.content.split(" ").slice(1);
 
 //All Rights For Larpraz And Night Blade
