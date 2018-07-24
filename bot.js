@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '%'
-
+//Dating Gamers BotBy li 7wak
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -27,6 +27,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
+
 
 
 
