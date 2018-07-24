@@ -30,6 +30,41 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 
 
 
+client.on('message', message => {
+     if(message.content.startsWith(prefix + "dms")) {
+ let args = message.content.split(" ").slice(1);
+
+//All Rights For Larpraz And Night Blade
+
+    var user = message.mentions.users.first();
+    var reason = args.slice(1).join(' ');
+    const embed = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp();
+
+    if (!user) {
+        embed.addField("DM A Person", `Who are you going to DM ${message.author.tag}?`)
+            .setFooter(`usage = %call [user] [message] **dont trust me**`);
+        return message.channel.send({embed});
+    } if (!reason) {
+        embed.addField("DM A Person", `What are you going to say to ${user.tag}?`)
+        return message.channel.send({embed});
+    }
+    embed.addField("DM A Person", `Successfully sent a DM to ${user.tag}!`)
+        .setFooter(`Dms`);
+    message.channel.send({embed});
+    const embed1 = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp()
+        .addField("You have received mail! :mailbox_with_mail:", `**${reason}**`)
+        .setFooter(`Sent by ${message.author.tag}.`);
+    user.send({embed: embed1});
+}
+});
+
+
+
+
 client.on('message', msg => {//msg
     if (msg.content === 'colors') {
       if (msg.channel.id !== "469301174542270464") return;
@@ -500,7 +535,7 @@ client.on('message', function(message) {
     .setTitle("`New Report!`")
     .setThumbnail(message.author.avatarURL)
     .addField("**# - Reported User:**",mUser,true)
-    .addField("**# - Reported User ID:**",mUser.id,true)
+    .addField("**# - Reported By:**",message.author.tag )
     .addField("**# - Reason:**",messageReason,true)
     .addField("**# - Channel:**",message.channel,true)
     .addField("**# - Time:**",message.createdAt,true)
@@ -516,7 +551,7 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
- client.channels.get("406189462419144745").send(Rembed)
+ client.channels.get("470646121899884554").send(Rembed)
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
