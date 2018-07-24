@@ -59,6 +59,7 @@ client.on('message', message => {
         .addField("You have received mail! :mailbox_with_mail:", `**${reason}**`)
         .setFooter(`Sent by ${message.author.tag}.`);
     user.send({embed: embed1});
+    message.delete();
 }
 });
 
