@@ -32,6 +32,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
 
 client.on('message', message => {
      if(message.content.startsWith("<dms")) {
+    message.delete();
  let args = message.content.split(" ").slice(1);
 
 //All Rights For Larpraz And Night Blade
@@ -59,7 +60,6 @@ client.on('message', message => {
         .addField("You have received mail! :mailbox_with_mail:", `**${reason}**`)
         .setFooter(`Sent by ${message.author.tag}.`);
     user.send({embed: embed1});
-    message.delete();
 }
 });
 
