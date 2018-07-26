@@ -205,7 +205,7 @@ if(!ReBeL.voiceChannel) {
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
-            client.login('NDU5OTEzNjIzODA5MDMyMjIz.DhvOkQ.43HL6NGV1LwBxoMRN6zp-3Khf_I');
+            client.login("BOT_TOKEN");
         },3000);
     }
 });
