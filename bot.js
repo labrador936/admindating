@@ -205,7 +205,7 @@ if(!ReBeL.voiceChannel) {
         console.log(`Restarting..`);
         setTimeout(() => {
             client.destroy();
-            client.login("BOT_TOKEN");
+            client.login("process.env.BOT_TOKEN");
         },3000);
     }
 });
