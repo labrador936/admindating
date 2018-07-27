@@ -48,7 +48,7 @@ client.on("message", async message => {
               console.log(`\n${message.author.tag} has ${nul} invites in ${guild.name}\n`)
               var embed = new Discord.RichEmbed()
                   .setColor("#000000")
-                    .addField(`${message.author.username}`, `You invited **${nul}** User`)
+                    .addField(`${message.author.username}`, `You invited **${nul}** Users`)
                           message.channel.send({ embed: embed });
                       return;
                     } else {
