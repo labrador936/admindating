@@ -22,6 +22,7 @@
     "moment": "^2.22.1",
     "ms": "^2.1.1",
     "opusscript": "0.0.6",
+    "discord-anti-spam": "1.1.2",
     "quick.db": "^6.2.0",
     "request": "^2.85.0",
     "simple-youtube-api": "^5.0.2",
