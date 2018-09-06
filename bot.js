@@ -22,7 +22,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
   console.log('╚[═══════════════════════]╝')
-  console.log(' Bot Is Online By Eriep')
+  console.log(' Bot Is Online By Saad')
   console.log('╚[═══════════════════════]╝')
   console.log('')
   console.log('')
@@ -74,7 +74,7 @@ client.on('message', message => {
     message.delete();
  let args = message.content.split(" ").slice(1);
 
-//All Rights For Larpraz And Night Blade
+//All Rights For Larpraz 
 
     var user = message.mentions.users.first();
     var reason = args.slice(1).join(' ');
@@ -211,7 +211,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' server', `${member.guild.name}`,true)
                                        
-     .setFooter("**Dating Everyone**")
+     .setFooter("**Dating Gamers**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -291,7 +291,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = "348555232529219585";
+	const myID = "444339372884754435";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -474,7 +474,6 @@ client.on("message", message => {
  %mute   <member> <reason>   | For Mute A Member
  %unmute <member>            | For Unmute A Member
  %warn   <member> <reason>   | Warn A Memebr
- %bc                         | For Do BroadCast
  %clear                      | To clear the chat
  +[ ---------------------------- ]+
          **General  Commands**
@@ -561,7 +560,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `348555232529219585` + ">" + "<@" + `444339372884754435` + ">")
+ client.channels.get("406189462419144745").send("<@" + `444339372884754435` + ">" + "<@" + `183831008049627136` + ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
