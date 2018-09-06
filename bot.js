@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '%'
-//Dating Gamers BotBy li 7wak
-
+//Dating Gamers BotBy Larpraz
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`Dating Gamers | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -22,7 +21,7 @@ client.user.setGame(`Dating Gamers Bot | %help`,"http://twitch.tv/S-F")
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
   console.log('╚[═══════════════════════]╝')
-  console.log(' Bot Is Online By Saad')
+  console.log(' Bot Is Online By Larpraz')
   console.log('╚[═══════════════════════]╝')
   console.log('')
   console.log('')
