@@ -125,7 +125,7 @@ client.on('message', message => {
   client.on('voiceStateUpdate', (codes, ReBeL) => {
 if(ReBeL.voiceChannelID !== "469190784177012755") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
-    rebeeel.setParent("469190277622530106");
+    rebeeel.setParent("469190784177012755");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
   console.log("تــــــم .");
   let scan = setInterval(()=>{
@@ -462,11 +462,11 @@ client.on("message", message => {
   message.channel.send('``Check Your DMs bud  ``')
    const embed = new Discord.RichEmbed()
        .setColor('Black')
-       .setFooter('By [Eriep] And [Vervolek]')
+       .setFooter('By [Larpraz] ')
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
-   **Administrationr Commands**
+   **Administration Commands**
  +[ ---------------------------- ]+
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
