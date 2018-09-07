@@ -171,7 +171,7 @@ if(!ReBeL.voiceChannel) {
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "444339372884754435") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "487314985362391060") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -388,7 +388,7 @@ client.on("message", function(message) {
    if(message.content.startsWith(prefix + "ban")) {
        if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You dont have enough permissions!**");
        if(!toBan) return message.reply("**# - Mention a user!**");
-       if(toBan.id === ("441924652437209090")) return message.reply("** You cannot ban me!**");
+       if(toBan.id === ("487314985362391060")) return message.reply("** You cannot ban me!**");
        if(toBan === message.member.guild.owner) return message.reply("** You cannot ban the owner of the server!**");
        if(toBan.bannable) return message.reply("**# - I cannot ban someone with a higher role than me!**");
        if(!toReason) return message.reply("**# - Supply a reason!**")
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `444339372884754435` + ">" + "<@" + `183831008049627136` + ">")
+ client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">" + "<@" + `183831008049627136` + ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
