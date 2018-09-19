@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '%'
-//Dating Gamers BotBy Larpraz
+//Dating Gamers Bot By Luca Changretta
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`Dating Gamers | %help`,"http://twitch.tv/S-F")
@@ -21,7 +21,7 @@ client.user.setGame(`Dating Gamers | %help`,"http://twitch.tv/S-F")
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
   console.log('╚[═══════════════════════]╝')
-  console.log(' Bot Is Online By Larpraz')
+  console.log(' Bot Is Online By Luca Changretta')
   console.log('╚[═══════════════════════]╝')
   console.log('')
   console.log('')
@@ -481,7 +481,7 @@ client.on("message", message => {
  %server                     | For See Server Stats
  %members                    | For See Members Stats
  %ping                       | To check your ping
-
+ %invites                     
  `)
  message.author.send(embed);
 }  
