@@ -367,7 +367,7 @@ client.on('message',function(message) {
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("You have been kicked from a server!")
+       .setTitle("You have been kicked from Dating Gamers server!")
        .setThumbnail(toKick.avatarURL)
        .addField("**# - Server:**",message.guild.name,true)
        .addField("**# - Reason:**",toReason,true)
@@ -396,7 +396,7 @@ client.on("message", function(message) {
        if(!message.guild.member(toBan).bannable) return message.reply("** - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Dating Everyone`` Go Away And Die Alone !")
+       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Dating Gamers`` Go Away And Die Alone !")
        .setThumbnail(toBan.avatarURL)
        .addField("** - Server:**",message.guild.name,true)
        .addField("** - Reason:**",toReason,true)
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">" + "<@" + `183831008049627136` + ">")
+ client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">" +)
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
