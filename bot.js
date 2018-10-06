@@ -639,14 +639,14 @@ client.on('message', message => {
     message.delete() 
     }
     }
-    if (message.content.startsWith("ban ")) {
+    if (message.content.startsWith(" ban ")) {
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
     var member= message.mentions.members.first();
     member.ban().then((member) => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting ' + member.displayName + ' Banned',
+    title: 'Reason Adversting fuck off ' + member.displayName + ' Banned',
     color: 490101,
     }
     });
