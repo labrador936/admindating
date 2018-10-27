@@ -4,7 +4,7 @@ const prefix = '%'
 //Dating Gamers Bot By Luca Changretta
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Dating Gamers | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`Sweet Home | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">@" +`494993792907345920`)
+ client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">@" +`487356411391770625`)
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
