@@ -367,7 +367,7 @@ client.on('message',function(message) {
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("You have been kicked from Dating Gamers server!")
+       .setTitle("You have been kicked from Sweet Home server!")
        .setThumbnail(toKick.avatarURL)
        .addField("**# - Server:**",message.guild.name,true)
        .addField("**# - Reason:**",toReason,true)
@@ -396,7 +396,7 @@ client.on("message", function(message) {
        if(!message.guild.member(toBan).bannable) return message.reply("** - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Dating Gamers`` Go Away And Die Alone !")
+       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Sweet Home`` Go Away And Die Alone !")
        .setThumbnail(toBan.avatarURL)
        .addField("** - Server:**",message.guild.name,true)
        .addField("** - Reason:**",toReason,true)
@@ -462,7 +462,7 @@ client.on("message", message => {
   message.channel.send('``Check Your DMs bud  ``')
    const embed = new Discord.RichEmbed()
        .setColor('Black')
-       .setFooter('By [Larpraz] ')
+       .setFooter('By [Sweet Team] ')
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
