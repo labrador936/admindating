@@ -402,7 +402,7 @@ client.on("message", function(message) {
        .addField("** - Reason:**",toReason,true)
        .addField("** - Banned By:**",message.author,true)
        if(message.member.hasPermission("BAN_MEMBERS")) return (
-           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Yes Ma Boy I Have Been banned  ${toBan}**`))
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Yes boi i have banned  ${toBan}**`))
        );
        
    }
