@@ -4,7 +4,7 @@ const prefix = '%'
 //Dating Gamers Bot By Luca Changretta
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Sweet Home | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`Gaming & Dating | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -367,7 +367,7 @@ client.on('message',function(message) {
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("You have been kicked from Sweet Home server!")
+       .setTitle("You have been kicked from Gaming Dating server!")
        .setThumbnail(toKick.avatarURL)
        .addField("**# - Server:**",message.guild.name,true)
        .addField("**# - Reason:**",toReason,true)
@@ -396,7 +396,7 @@ client.on("message", function(message) {
        if(!message.guild.member(toBan).bannable) return message.reply("** - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Sweet Home`` Go Away And Die Alone !")
+       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Gaming Dating`` Go Away And Die Alone !")
        .setThumbnail(toBan.avatarURL)
        .addField("** - Server:**",message.guild.name,true)
        .addField("** - Reason:**",toReason,true)
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">@" +`487356411391770625`)
+ client.channels.get("406189462419144745").send("<@" + `487314985362391060` + "<@" +`487356411391770625`)
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
