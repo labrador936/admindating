@@ -123,7 +123,7 @@ client.on('message', message => {
 
 
   client.on('voiceStateUpdate', (codes, ReBeL) => {
-if(ReBeL.voiceChannelID !== "469190784177012755") return console.log("أيرور . ");
+if(ReBeL.voiceChannelID !== "688141942889906210") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
     rebeeel.setParent("469190277622530106");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
@@ -195,7 +195,7 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome-my-dear');
+    let channel = member.guild.channels.find('name', 'general');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
