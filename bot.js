@@ -290,7 +290,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = "444339372884754435";
+	const myID = "451068327599669259";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `487314985362391060` + ">" + "<@" +`487356411391770625`+ ">")
+ client.channels.get("406189462419144745").send("<@" + `451068327599669259` + ">" + "<@" +`612281442877177857`+ ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
@@ -568,6 +568,18 @@ reaction2.on("collect", r => {
 })
 }
 });
+
+client.on('message', message => {
+
+    if (message.content.startsWith("ip")) {        
+    const embed = new Discord.RichEmbed()
+        .setColor("#081070")
+        .setDescription(" 104.47.163.204:30120 :tada:")
+      message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
+}
+});
+
+
 
 
 
