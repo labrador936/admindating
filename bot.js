@@ -574,7 +574,7 @@ client.on('message', message => {
     if (message.content.startsWith("ip")) {        
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
-        .setDescription(" 104.47.163.204:30120 :tada:")
+        .setDescription(" Welcome : https://atlanticfivem.netlify.com :tada:")
       message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
@@ -594,7 +594,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
         .setDescription(" Welcome Back :tada:")
-      message.channel.sendEmbed(embed).then(message => {message.delete(60000)});
+      message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
 
