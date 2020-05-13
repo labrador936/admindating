@@ -21,7 +21,7 @@ client.user.setGame(`by Willson  | %help`,"http://twitch.tv/S-F")
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('╚[════════════════════════════════════]╝')
   console.log('╚[═══════════════════════]╝')
-  console.log(' Bot Is Online By Luca Changretta')
+  console.log(' Bot Is Online By Willson')
   console.log('╚[═══════════════════════]╝')
   console.log('')
   console.log('')
@@ -73,7 +73,7 @@ client.on('message', message => {
     message.delete();
  let args = message.content.split(" ").slice(1);
 
-//All Rights For Larpraz 
+//All Rights For Willson
 
     var user = message.mentions.users.first();
     var reason = args.slice(1).join(' ');
@@ -171,7 +171,7 @@ if(!ReBeL.voiceChannel) {
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "487314985362391060") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "451068327599669259") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -195,14 +195,14 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'general');
+    let channel = member.guild.channels.find('name', 'serverhoond');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | Norther server oh my heart' , `Welcome to Atlantic, ${member}`)
+        .addField(':loudspeaker: | Norther server oh my heart' , `Welcome to ATLANTIC VIP WAIT PLZ..., ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('| You are the member number',`${member.guild.memberCount}`)
                
@@ -402,7 +402,7 @@ client.on("message", function(message) {
        .addField("** - Reason:**",toReason,true)
        .addField("** - Banned By:**",message.author,true)
        if(message.member.hasPermission("BAN_MEMBERS")) return (
-           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Yes boi i have banned  ${toBan}**`))
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**iwa ana li dirtha l rassi :( ${toBan}**`))
        );
        
    }
@@ -466,7 +466,7 @@ client.on("message", message => {
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
-   **Administration Commands**
+   **Administration Commands By Willson**
  +[ ---------------------------- ]+
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
@@ -558,8 +558,8 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
- client.channels.get("406189462419144745").send(Rembed)
- client.channels.get("406189462419144745").send("<@" + `451068327599669259` + ">" + "<@" +`612281442877177857`+ ">")
+ client.channels.get("708203707606761562").send(Rembed)
+ client.channels.get("708203707606761562").send("<@" + `487314985362391060` + ">" + "<@" +`708840492418203758`+ ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
@@ -574,10 +574,28 @@ client.on('message', message => {
     if (message.content.startsWith("ip")) {        
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
-        .setDescription(" Welcome : https://atlanticfivem.netlify.com :tada:")
+        .setDescription(" Sir T9awed aweld nass F**k OFF")
       message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
+
+
+
+
+client.on('message', message => {
+
+    if (message.content.startsWith("salam")) {        
+    const embed = new Discord.RichEmbed()
+        .setColor("#081070")
+        .setDescription(" rask ki l9alam ")
+      message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
+}
+});
+
+
+
+
+
 
 
 
@@ -620,12 +638,12 @@ if (command == "warn") {
     .setDescription(args.join("  "))
     .setColor(0x831f18)
     message.channel.sendEmbed(say);
-    client.channels.get("462865002819223552").send(`**=========================================**`)
-    client.channels.get("462865002819223552").send(`**New Warn !**`)
-    client.channels.get("462865002819223552").send({embed : say})
-    client.channels.get("462865002819223552").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("462865002819223552").send(`**# - In Channel : ${message.channel}**`)
-    client.channels.get("462865002819223552").send(`**==========================================**`	)
+    client.channels.get("708203707606761562").send(`**=========================================**`)
+    client.channels.get("708203707606761562").send(`**New Warn !**`)
+    client.channels.get("708203707606761562").send({embed : say})
+    client.channels.get("708203707606761562").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
+    client.channels.get("708203707606761562").send(`**# - In Channel : ${message.channel}**`)
+    client.channels.get("708203707606761562").send(`**==========================================**`	)
     message.delete();
   }
 
@@ -658,7 +676,7 @@ client.on('message', message => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting fuck off ' + member.displayName + ' Banned',
+    title: 'Reason Adversting alwada3 ya zoubi ' + member.displayName + ' Banned',
     color: 490101,
     }
     });
