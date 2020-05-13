@@ -388,7 +388,7 @@ client.on("message", function(message) {
    if(message.content.startsWith(prefix + "ban")) {
        if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You dont have enough permissions!**");
        if(!toBan) return message.reply("**# - Mention a user!**");
-       if(toBan.id === ("487314985362391060")) return message.reply("** You cannot ban me!**");
+       if(toBan.id === ("451068327599669259")) return message.reply("** You cannot ban me!**");
        if(toBan === message.member.guild.owner) return message.reply("** You cannot ban the owner of the server!**");
        if(toBan.bannable) return message.reply("**# - I cannot ban someone with a higher role than me!**");
        if(!toReason) return message.reply("**# - Supply a reason!**")
@@ -559,7 +559,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
  client.channels.get("708203707606761562").send(Rembed)
- client.channels.get("708203707606761562").send("<@" + `487314985362391060` + ">" + "<@" +`708840492418203758`+ ">")
+ client.channels.get("708203707606761562").send("<@" + `451068327599669259` + ">" + "<@" +`708840492418203758`+ ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
