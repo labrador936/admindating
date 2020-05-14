@@ -195,14 +195,14 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'serverhoond');
+    let channel = member.guild.channels.find('name', 'verify-yourself');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | Norther server oh my heart' , `Welcome to ATLANTIC VIP WAIT PLZ..., ${member}`)
+        .addField(':loudspeaker: | Another member welcome :heart:' , `Welcome to ATLANTIC VIP ping @Verifymeplz join voice channel and wait Thank you, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('| You are the member number',`${member.guild.memberCount}`)
                
