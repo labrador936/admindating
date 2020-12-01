@@ -195,14 +195,14 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'verify-yourself');
+    let channel = member.guild.channels.find('name', 'live-verification');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | Another member welcome :heart:' , `Welcome to ATLANTIC VIP ping @Verifymeplz join voice channel and wait Thank you, ${member}`)
+        .addField(':loudspeaker: | Another member welcome :heart:' , `Welcome to EDATING ONLINE ping @Verifymeplz join voice channel and wait Thank you, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('| You are the member number',`${member.guild.memberCount}`)
                
@@ -210,7 +210,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' server', `${member.guild.name}`,true)
                                        
-     .setFooter("**Atlantic Team**")
+     .setFooter("**E-DATING ONLINE**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -290,7 +290,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = "451068327599669259";
+	const myID = "685147255594156035";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -396,7 +396,7 @@ client.on("message", function(message) {
        if(!message.guild.member(toBan).bannable) return message.reply("** - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``Gaming Dating`` Go Away And Die Alone !")
+       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``ONLINE Gaming Dating`` Go Away And Die Alone !")
        .setThumbnail(toBan.avatarURL)
        .addField("** - Server:**",message.guild.name,true)
        .addField("** - Reason:**",toReason,true)
@@ -466,7 +466,7 @@ client.on("message", message => {
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
-   **Administration Commands By Willson**
+   **Administration Commands By LOCO **
  +[ ---------------------------- ]+
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
@@ -574,7 +574,7 @@ client.on('message', message => {
     if (message.content.startsWith("ip")) {        
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
-        .setDescription(" Sir T9awed aweld nass F**k OFF")
+        .setDescription(" Hoowdi wellcum ^^ ")
       message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
@@ -638,12 +638,12 @@ if (command == "warn") {
     .setDescription(args.join("  "))
     .setColor(0x831f18)
     message.channel.sendEmbed(say);
-    client.channels.get("708203707606761562").send(`**=========================================**`)
-    client.channels.get("708203707606761562").send(`**New Warn !**`)
-    client.channels.get("708203707606761562").send({embed : say})
-    client.channels.get("708203707606761562").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("708203707606761562").send(`**# - In Channel : ${message.channel}**`)
-    client.channels.get("708203707606761562").send(`**==========================================**`	)
+    client.channels.get("783298095554625536").send(`**=========================================**`)
+    client.channels.get("783298095554625536").send(`**New Warn !**`)
+    client.channels.get("783298095554625536").send({embed : say})
+    client.channels.get("783298095554625536").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
+    client.channels.get("783298095554625536").send(`**# - In Channel : ${message.channel}**`)
+    client.channels.get("783298095554625536").send(`**==========================================**`	)
     message.delete();
   }
 
@@ -676,7 +676,7 @@ client.on('message', message => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting alwada3 ya zoubi ' + member.displayName + ' Banned',
+    title: 'Reason Adversting discord invite link ' + member.displayName + ' Banned',
     color: 490101,
     }
     });
