@@ -4,7 +4,7 @@ const prefix = '%'
 //Dating Gamers Bot By Luca Changretta
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`by E-girls  | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`by E-ChatS  | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
