@@ -558,8 +558,8 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
- client.channels.get("783208750193836052").send(Rembed)
- client.channels.get("783208750193836052").send("<@" + `685147255594156035` + ">" + "<@" +`688206339025141792`+ ">")
+ client.channels.get("784818609322196992").send(Rembed)
+ client.channels.get("784818609322196992").send("<@" + `685147255594156035` + ">" + "<@" +`388130654979751937`+ ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
