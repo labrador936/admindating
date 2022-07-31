@@ -123,7 +123,7 @@ client.on('message', message => {
 
 
   client.on('voiceStateUpdate', (codes, ReBeL) => {
-if(ReBeL.voiceChannelID !== "403697654443540490") return console.log("أيرور . ");
+if(ReBeL.voiceChannelID !== "1003403925501784084") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
     rebeeel.setParent("1003404111393337384");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
@@ -462,7 +462,7 @@ client.on("message", message => {
   message.channel.send('``Check Your DMs budy  ``')
    const embed = new Discord.RichEmbed()
        .setColor('Black')
-       .setFooter('By [Sweet Team] ')
+       .setFooter('By [ATLANTIC] ')
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
