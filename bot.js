@@ -195,7 +195,7 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('verification');
+    let channel = member.guild.channels.find('#verification');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
