@@ -125,7 +125,7 @@ client.on('message', message => {
   client.on('voiceStateUpdate', (codes, ReBeL) => {
 if(ReBeL.voiceChannelID !== "1003404111393337384") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
-    rebeeel.setParent("403697654443540490");
+    rebeeel.setParent("1003403925501784084");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
   console.log("تــــــم .");
   let scan = setInterval(()=>{
