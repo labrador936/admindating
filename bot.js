@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '%'
-//Dating Gamers Bot By Luca Changretta
+//Atlantic Bot By Willson
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`by E-ChatS  | %help`,"http://twitch.tv/S-F")
+client.user.setGame(`by Willson | %help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('') 
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -123,9 +123,9 @@ client.on('message', message => {
 
 
   client.on('voiceStateUpdate', (codes, ReBeL) => {
-if(ReBeL.voiceChannelID !== "688144188398764096") return console.log("أيرور . ");
+if(ReBeL.voiceChannelID !== "403697654443540490") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
-    rebeeel.setParent("688144037047435414");
+    rebeeel.setParent("1003404111393337384");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
   console.log("تــــــم .");
   let scan = setInterval(()=>{
@@ -171,7 +171,7 @@ if(!ReBeL.voiceChannel) {
 
   client.on('message',async message => {
     if(message.content.startsWith(prefix + "restart")) {
-        if(message.author.id !== "451068327599669259") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "494359769268617217") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -202,7 +202,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | Another member welcome :heart:' , `Welcome to EDATING ONLINE ping @Verifymeplz join voice channel and wait Thank you, ${member}`)
+        .addField(':loudspeaker: | Another member welcome :heart:' , `Welcome to Atlantic ping @Verifymeplz join voice channel and wait Thank you, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('| You are the member number',`${member.guild.memberCount}`)
                
@@ -210,7 +210,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' server', `${member.guild.name}`,true)
                                        
-     .setFooter("**E-DATING ONLINE**")
+     .setFooter("**ATLANTIC**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -290,7 +290,7 @@ client.on('message', function(msg) {
 
 
 client.on('message', function(message) {
-	const myID = "685147255594156035";
+	const myID = "494359769268617217";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -303,7 +303,7 @@ client.on('message', function(message) {
     } else if(message.content.startsWith(prefix + "stream")) {
 		        if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
-        client.user.setGame(args , 'https://www.twitch.tv/datingbot');
+        client.user.setGame(args , 'https://www.twitch.tv/atlanticbot');
         message.channel.send(':white_check_mark: Done!').then(msg => {
            msg.delete(5000);
           message.delete(5000);
@@ -367,7 +367,7 @@ client.on('message',function(message) {
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("You have been kicked from Gaming Dating server!")
+       .setTitle("You have been kicked from A T L A N T I C server!")
        .setThumbnail(toKick.avatarURL)
        .addField("**# - Server:**",message.guild.name,true)
        .addField("**# - Reason:**",toReason,true)
@@ -388,7 +388,7 @@ client.on("message", function(message) {
    if(message.content.startsWith(prefix + "ban")) {
        if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You dont have enough permissions!**");
        if(!toBan) return message.reply("**# - Mention a user!**");
-       if(toBan.id === ("451068327599669259")) return message.reply("** You cannot ban me!**");
+       if(toBan.id === ("494359769268617217")) return message.reply("** You cannot ban me!**");
        if(toBan === message.member.guild.owner) return message.reply("** You cannot ban the owner of the server!**");
        if(toBan.bannable) return message.reply("**# - I cannot ban someone with a higher role than me!**");
        if(!toReason) return message.reply("**# - Supply a reason!**")
@@ -396,13 +396,13 @@ client.on("message", function(message) {
        if(!message.guild.member(toBan).bannable) return message.reply("** - I cannot ban this person!**")
        let toEmbed;
        toEmbed = new Discord.RichEmbed()
-       .setTitle("Hello MotherFucker :wave: You Have Been Banned From ``ONLINE Gaming Dating`` Go Away And Die Alone !")
+       .setTitle("Hello MotherFucker :wave: You Have Banned From ``A T L A N T I C`` Go Away ... !")
        .setThumbnail(toBan.avatarURL)
        .addField("** - Server:**",message.guild.name,true)
        .addField("** - Reason:**",toReason,true)
        .addField("** - Banned By:**",message.author,true)
        if(message.member.hasPermission("BAN_MEMBERS")) return (
-           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**iwa ana li dirtha l rassi :( ${toBan}**`))
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`** A DIEU :( ${toBan}**`))
        );
        
    }
@@ -459,7 +459,7 @@ client.on("message", function(message) {
 
 client.on("message", message => {
   if (message.content === "%help") {
-  message.channel.send('``Check Your DMs bud  ``')
+  message.channel.send('``Check Your DMs budy  ``')
    const embed = new Discord.RichEmbed()
        .setColor('Black')
        .setFooter('By [Sweet Team] ')
@@ -558,8 +558,8 @@ let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.
 let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
 reaction1.on("collect", r => {
- client.channels.get("784818609322196992").send(Rembed)
- client.channels.get("784818609322196992").send("<@" + `685147255594156035` + ">" + "<@" +`388130654979751937`+ ">")
+ client.channels.get("1003402087750701088").send(Rembed)
+ client.channels.get("1003402087750701088").send("<@" + `494359769268617217` + ">" + "<@" +`663008100730798160`+ ">")
     message.reply("**# - Done! 🎇**");
 })
 reaction2.on("collect", r => {
@@ -574,7 +574,7 @@ client.on('message', message => {
     if (message.content.startsWith("ip")) {        
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
-        .setDescription(" Hoowdi wellcum ^^ ")
+        .setDescription(" Hoowdi welcome ^^ ")
       message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
@@ -584,10 +584,20 @@ client.on('message', message => {
 
 client.on('message', message => {
 
+    if (message.content.startsWith("hey")) {        
+    const embed = new Discord.RichEmbed()
+        .setColor("#081070")
+        .setDescription(" hello , hope u doing OK  ")
+      message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
+}
+});
+
+client.on('message', message => {
+
     if (message.content.startsWith("salam")) {        
     const embed = new Discord.RichEmbed()
         .setColor("#081070")
-        .setDescription(" rask ki l9alam ")
+        .setDescription(" Alikm Salam  ")
       message.channel.sendEmbed(embed).then(message => {message.delete(90000)});
 }
 });
@@ -638,12 +648,12 @@ if (command == "warn") {
     .setDescription(args.join("  "))
     .setColor(0x831f18)
     message.channel.sendEmbed(say);
-    client.channels.get("783298095554625536").send(`**=========================================**`)
-    client.channels.get("783298095554625536").send(`**New Warn !**`)
-    client.channels.get("783298095554625536").send({embed : say})
-    client.channels.get("783298095554625536").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
-    client.channels.get("783298095554625536").send(`**# - In Channel : ${message.channel}**`)
-    client.channels.get("783298095554625536").send(`**==========================================**`	)
+    client.channels.get("1003402807895924826").send(`**=========================================**`)
+    client.channels.get("1003402807895924826").send(`**New Warn !**`)
+    client.channels.get("1003402807895924826").send({embed : say})
+    client.channels.get("1003402807895924826").send(`**# - Admin : ${message.author.username}#${message.author.discriminator}**`)
+    client.channels.get("1003402807895924826").send(`**# - In Channel : ${message.channel}**`)
+    client.channels.get("1003402807895924826").send(`**==========================================**`	)
     message.delete();
   }
 
@@ -665,18 +675,18 @@ client.on('message', message => {
     if (message.content.includes('https://discord.gg')){
     if(!message.channel.guild) return message.reply ('')
     if (!message.member.hasPermissions(['MANAGE_MESSAGES'])){
-    message.channel.send('ban <@' + message.author.id + '>')
+    message.channel.send('kick <@' + message.author.id + '>')
     message.delete() 
     }
     }
-    if (message.content.startsWith("ban ")) {
+    if (message.content.startsWith("kick ")) {
     if(!message.member.hasPermission('ADMINISTRATOR')) return message.reply();
     var member= message.mentions.members.first();
     member.ban().then((member) => {
     message.channel.sendMessage("", {embed: {
     author: {
     },
-    title: 'Reason Adversting discord invite link ' + member.displayName + ' Banned',
+    title: 'Reason Adversting discord invite link ' + member.displayName + ' kicked',
     color: 490101,
     }
     });
