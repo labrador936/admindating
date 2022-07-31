@@ -123,9 +123,9 @@ client.on('message', message => {
 
 
   client.on('voiceStateUpdate', (codes, ReBeL) => {
-if(ReBeL.voiceChannelID !== "1003403925501784084") return console.log("أيرور . ");
+if(ReBeL.voiceChannelID !== "1003404111393337384") return console.log("أيرور . ");
 ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
-    rebeeel.setParent("1003404111393337384");
+    rebeeel.setParent("403697654443540490");
 ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
   console.log("تــــــم .");
   let scan = setInterval(()=>{
@@ -195,7 +195,7 @@ if(!ReBeL.voiceChannel) {
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'verification');
+    let channel = member.guild.channels.find('verification');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -373,7 +373,7 @@ client.on('message',function(message) {
        .addField("**# - Reason:**",toReason,true)
        .addField("**# - Kicked By:**",message.author,true)
        if(message.member.hasPermission("KICK_MEMBERS")) return (
-           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`**Yes Ma Boy I Have Been _kicked_  ${toKick}**`))
+           toKick.sendMessage({embed: toEmbed}).then(() => message.guild.member(toKick).kick()).then(() => message.channel.send(`** OH I Have Been _kicked_  ${toKick}**`))
        )
        }
 });
@@ -402,7 +402,7 @@ client.on("message", function(message) {
        .addField("** - Reason:**",toReason,true)
        .addField("** - Banned By:**",message.author,true)
        if(message.member.hasPermission("BAN_MEMBERS")) return (
-           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`** A DIEU :( ${toBan}**`))
+           toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`** A DIEU be wise next time :( ${toBan}**`))
        );
        
    }
@@ -466,7 +466,7 @@ client.on("message", message => {
        .setThumbnail(message.author.avatarURL)
        .setDescription(`
  +[ ---------------------------- ]+
-   **Administration Commands By LOCO **
+   **Administration Commands By Willson **
  +[ ---------------------------- ]+
  %ban    <member> <reason>   | For Ban A Member
  %kick   <member> <reason>   | For Kick A Member
@@ -656,7 +656,6 @@ if (command == "warn") {
     client.channels.get("1003402807895924826").send(`**==========================================**`	)
     message.delete();
   }
-
 
 });
 
